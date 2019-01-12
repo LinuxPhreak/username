@@ -13,4 +13,4 @@ Currently right now it simply tells you if a username exists and where it exists
 
 	python3 username.py
 
-	![Program Running](include/program.png)
+	![Program Running](https://raw.githubusercontent.com/LinuxPhreak/username/master/include/program.png)
