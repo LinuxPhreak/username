@@ -13,4 +13,4 @@ Navigate to the username directory on your computer in your terminal and type th
 
 `python3 username.py`
 
-![Program Running](https://raw.githubusercontent.com/LinuxPhreak/username/master/include/program.png)
+![Program Running](include/program.png)
