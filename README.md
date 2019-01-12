@@ -5,12 +5,12 @@ Currently right now it simply tells you if a username exists and where it exists
 
 ## Requirements
 
-	* [Python3.6 or higher](https://www.python.org/)
-	* [Beutiful Soup 4 or higher](https://pypi.org/project/beautifulsoup4/)
+	[Python3.6 or higher](https://www.python.org/)
+	[Beutiful Soup 4 or higher](https://pypi.org/project/beautifulsoup4/)
 
 ## Usuage
 	Navigate to the username directory on your computer in your terminal and type the following. 
 
-	python3 username.py
+	`python3 username.py`
 
 	![Program Running](https://raw.githubusercontent.com/LinuxPhreak/username/master/include/program.png)
