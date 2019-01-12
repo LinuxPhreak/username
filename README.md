@@ -5,8 +5,24 @@ Currently right now it simply tells you if a username exists and where it exists
 
 ## Requirements
 
-* [Python3.6 or higher](https://www.python.org)
-* [Beutiful Soup 4 or higher](https://pypi.org/project/beautifulsoup4/)
+* [Python3.6 or higher](http://go.techmeout.org/27)
+* [Beutiful Soup 4 or higher](http://go.techmeout.org/2K)
+
+## Installation
+First install Git and Python3 from your Linux distro
+### Ubuntu/Debian/LinuxMint
+`sudo apt install git python3`
+
+### Fedora 28 or higher
+`sudo dnf install git python3`
+
+### Fedora 27 or older, CentOS, RedHat
+`sudo yum install git python3`
+
+Next you clone the username repo. 
+`git clone https://github.com/LinuxPhreak/username.git`
+
+>Be sure to configure your git correctly. [Git Tutorial](https://techmeout.org/git-tutorial/)
 
 ## Usuage
 Navigate to the username directory on your computer in your terminal and type the following. 
