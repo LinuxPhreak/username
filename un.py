@@ -30,6 +30,14 @@ def googleplus():
 	except urllib.error.HTTPError as e:
 		print('\033[0;31;48mUser '+ username + ' Not Found: on Google +')
 
+#Blogger
+def blogger():
+	try:
+		blogspot = urllib.request.urlopen('https://' + username + '.blogspot.com/')
+		print('\033[0;32;48mFound User: https://' + username + '.blogspot.com/')
+	except urllib.error.HTTPError as e:
+		print('\033[0;31;48mUser '+ username + ' Not Found: on Blogger')
+
 #YouTube
 def youtube():
 	try:
@@ -60,7 +68,47 @@ def wordpress():
 		wp = urllib.request.urlopen('https://' + username + '.wordpress.com/')
 		print('\033[0;32;48mFound User: https://' + username + '.wordpress.com/')
 	except urllib.error.HTTPError as e:
-		print('\033[0;31;48mUser '+ username + ' Not Found: on Vimeo')
+		print('\033[0;31;48mUser '+ username + ' Not Found: on WordPresss')
+
+#Tumblr
+def tumblr():
+	try:
+		tmb = urllib.request.urlopen('http://' + username + '.tumblr.com/#_=_')
+		print('\033[0;32;48mFound User: http://' + username + '.tumblr.com/#_=_')
+	except urllib.error.HTTPError as e:
+		print('\033[0;31;48mUser '+ username + ' Not Found: on Tumblr')
+
+#GitHub
+def github():
+	try:
+		git = urllib.request.urlopen('https://github.com/' + username)
+		print('\033[0;32;48mFound User: https://github.com/' + username)
+	except urllib.error.HTTPError as e:
+		print('\033[0;31;48mUser '+ username + ' Not Found: on GitHub')
+
+#Instagram
+def instagram():
+	try:
+		instg = urllib.request.urlopen('https://www.instagram.com/' + username)
+		print('\033[0;32;48mFound User: https://www.instagram.com/' + username)
+	except urllib.error.HTTPError as e:
+		print('\033[0;31;48mUser '+ username + ' Not Found: on Instagram')
+
+#FLICKR
+def flickr():
+	try:
+		flick = urllib.request.urlopen('https://www.flickr.com/people/' + username)
+		print('\033[0;32;48mFound User: https://www.flickr.com/people/' + username)
+	except urllib.error.HTTPError as e:
+		print('\033[0;31;48mUser '+ username + ' Not Found: on Flickr')
+
+#Pinterist
+def pinterest():
+	try:
+		pint = urllib.request.urlopen('https://www.pinterest.com/' + username)
+		print('\033[0;32;48mFound User: https://www.pinterest.com/' + username)
+	except urllib.error.HTTPError as e:
+		print('\033[0;31;48mUser '+ username + ' Not Found: on Pinterist')
 
 print('Enter a number to get the user name on a specific site. \nEntering the number 1 will search for the \nsame username on all sites in the list. \n')
 print('1: All                   2: Facebook      	  3: Twitter')
@@ -90,6 +138,12 @@ if (number == "1"):
 	about()
 	vimeo()
 	wordpress()
+	blogger()
+	tumblr()
+	github()
+	instagram()
+	flickr()
+	pinterest()
 elif (number == "2"):
 	username = input("Username: ")
 	facebook()
@@ -102,9 +156,27 @@ elif (number == "4"):
 elif (number == "5"):
 	username = input("Username: ")
 	youtube()
+elif (number == "6"):
+	username = input("Username: ")
+	blogger()
 elif (number == "7"):
 	username = input("Username: ")
 	wordpress()
+elif (number == "8"):
+	username = input("Username: ")
+	tumblr()
+elif (number == "9"):
+	username = input("Username: ")
+	github()
+elif (number == "10"):
+	username = input("Username: ")
+	instagram()
+elif (number == "11"):
+	username = input("Username: ")
+	flickr()
+elif (number == "12"):
+	username = input("Username: ")
+	pinterest()
 elif (number == "21"):
 	username = input("Username: ")
 	about()
