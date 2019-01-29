@@ -110,6 +110,30 @@ def pinterest():
 	except urllib.error.HTTPError as e:
 		print('\033[0;31;48mUser '+ username + ' Not Found: on Pinterist')
 
+#SoundCloud
+def sndcloud():
+	try:
+		sc = urllib.request.urlopen('https://soundcloud.com/' + username)
+		print('\033[0;32;48mFound User: https://soundcloud.com/' + username)
+	except urllib.error.HTTPError as e:
+		print('\033[0;31;48mUser '+ username + ' Not Found: on SoundCloud')
+
+#Spotify
+def spotify():
+	try:
+		spot = urllib.request.urlopen('https://open.spotify.com/user/' + username)
+		print('\033[0;32;48mFound User: https://open.spotify.com/user/' + username)
+	except urllib.error.HTTPError as e:
+		print('\033[0;31;48mUser '+ username + ' Not Found: on Spotify')
+
+#MixCloud
+def mixcloud():
+	try:
+		mc = urllib.request.urlopen('https://www.mixcloud.com/' + username)
+		print('\033[0;32;48mFound User: https://www.mixcloud.com/' + username)
+	except urllib.error.HTTPError as e:
+		print('\033[0;31;48mUser '+ username + ' Not Found: on Mixcloud')
+
 print('Enter a number to get the user name on a specific site. \nEntering the number 1 will search for the \nsame username on all sites in the list. \n')
 print('1: All                   2: Facebook      	  3: Twitter')
 print('4: Google +              5: Youtube       	  6: Blogger')
@@ -144,6 +168,9 @@ if (number == "1"):
 	instagram()
 	flickr()
 	pinterest()
+	sndcloud()
+	spotify()
+	mixcloud()
 elif (number == "2"):
 	username = input("Username: ")
 	facebook()
@@ -177,6 +204,15 @@ elif (number == "11"):
 elif (number == "12"):
 	username = input("Username: ")
 	pinterest()
+elif (number == "13"):
+	username = input("Username: ")
+	sndcloud()
+elif (number == "14"):
+	username = input("Username: ")
+	spotify()
+elif (number == "15"):
+	username = input("Username: ")
+	mixcloud()
 elif (number == "21"):
 	username = input("Username: ")
 	about()
