@@ -2,7 +2,6 @@
 import urllib.request
 import urllib.error
 import os
-#
 
 os.system("printf '\033c'");
 
@@ -134,6 +133,23 @@ def mixcloud():
 	except urllib.error.HTTPError as e:
 		print('\033[0;31;48mUser '+ username + ' Not Found: on Mixcloud')
 
+#Ello
+def ello():
+	try:
+		el = urllib.request.urlopen('https://ello.co/' + username)
+		print('\033[0;32;48mFound User: https://ello.co/' + username)
+	except urllib.error.HTTPError as e:
+		print('\033[0;31;48mUser '+ username + ' Not Found: on Ello')
+
+#Patreon
+def patreon():
+	try:
+		pat = urllib.request.urlopen('https://www.patreon.com/' + username)
+		print('\033[0;32;48mFound User: https://www.patreon.com/' + username)
+	except urllib.error.HTTPError as e:
+		print('\033[0;31;48mUser '+ username + ' Not Found: on Patreon')
+
+
 print('Enter a number to get the user name on a specific site. \nEntering the number 1 will search for the \nsame username on all sites in the list. \n')
 print('1: All                   2: Facebook      	  3: Twitter')
 print('4: Google +              5: Youtube       	  6: Blogger')
@@ -213,6 +229,12 @@ elif (number == "14"):
 elif (number == "15"):
 	username = input("Username: ")
 	mixcloud()
+elif (number == "16"):
+	username = input("Username: ")
+	ello()
+elif (number == "17"):
+	username = input("Username: ")
+	patreon()
 elif (number == "21"):
 	username = input("Username: ")
 	about()
