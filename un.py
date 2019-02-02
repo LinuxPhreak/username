@@ -140,6 +140,7 @@ def ello():
 		print('\033[0;32;48mFound User: https://ello.co/' + username)
 	except urllib.error.HTTPError as e:
 		print('\033[0;31;48mUser '+ username + ' Not Found: on Ello')
+		print(e)
 
 #Patreon
 def patreon():

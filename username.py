@@ -13,7 +13,7 @@ def intro():
 	print('\033[1;33;48m|  |  |  |  |  |  |   >   <     >   <   ')
 	print("\033[1;33;48m|  '--'  |  `--'  |  /  .  \   /  .  \  ")
 	print('\033[1;33;48m|_______/ \______/  /__/ \__\ /__/ \__\   ') 
-	time.sleep(10);
+	time.sleep(2);
 	os.system("printf '\033c'");                          
 
 #This is a testing function
