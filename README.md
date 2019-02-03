@@ -19,6 +19,12 @@ First install Git and Python3 from your Linux distro
 ### Fedora 27 or older, CentOS, RedHat
 `sudo yum install git python3`
 
+### Arch Linux
+`pacman -S git python3`
+
+### Gentoo
+`emerge --ask dev-lang/python:3.7`
+
 Next you clone the username repo. 
 `git clone https://github.com/LinuxPhreak/username.git`
 
