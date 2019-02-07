@@ -12,5 +12,5 @@ setup(name='Username',
       platform='Linux',
       url='https://linuxphreak.github.io/username/',
       packages=find_packages(),
-      install_requires=['requests','os','bs4']
+      install_requires=['requests','bs4']
      )
