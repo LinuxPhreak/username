@@ -15,8 +15,7 @@ md5sums=("SKIP")
 
 pkgver()
 {
-  cd "$_pkgname"
-  echo $(git rev-list --count HEAD).$(git rev-parse --short HEAD)
+    echo $pkgver 
 }
 
 package()
