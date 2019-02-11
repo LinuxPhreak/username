@@ -50,8 +50,8 @@ setup(
     # and refuse to install the project if the version does not match. If you
     # do not support Python 2, you can simplify this to '>=3.5' or similar, see
     # https://packaging.python.org/guides/distributing-packages-using-setuptools/#python-requires
-    python_requires='<=3.7.*',
+    python_requires='>=3.7.*',
     # For an analysis of "install_requires" vs pip's requirements files see:
     # https://packaging.python.org/en/latest/requirements.html
-    install_requires=['requests','os','beautifulsoup4'],  # Optional
+    install_requires=['requests','beautifulsoup4'],  # Optional
 )
