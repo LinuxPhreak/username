@@ -11,16 +11,25 @@ Currently right now it simply tells you if a username exists and where it exists
 ## Installation
 First install Git and Python3 from your Linux distro
 ### Ubuntu/Debian/LinuxMint
-`sudo apt install git python3`
+`sudo apt install git python3 python3-bs4`
 
 ### Fedora 28 or higher
-`sudo dnf install git python3`
+`sudo dnf install git python3 python3-beautifulsoup4`
 
 ### Fedora 27 or older, CentOS, RedHat
-`sudo yum install git python3`
+`sudo yum install git python3 python3-beautifulsoup4`
 
 ### Arch Linux
-`pacman -S git python3`
+`pacman -S git python3 python-beautifulsoup4`
+
+I have an Arch Linux Repository For Username. You can install using pacman by doing the following.
+Add the following lines to your `/etc/pacman.conf` file. 
+`[bigben-repo]
+Server = http://bennix.net/bigben-repo/`
+Then update the repo list.
+`pacman -Syy`
+Then you can install by simply typing in the following.
+`pacman -S username`
 
 ### Gentoo
 `emerge --ask dev-lang/python:3.7`
