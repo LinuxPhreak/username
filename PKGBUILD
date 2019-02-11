@@ -1,7 +1,7 @@
 # Maintainer: Ben P. Dorsi-Todaro <ben@bigbenshosting.com>
 pkgname=username
 _pkgname=$pkgname
-pkgver=33.b5b48f7
+pkgver=1.0.0
 pkgrel=1
 provides=("$_pkgname")
 conflicts=("$_pkgname")
