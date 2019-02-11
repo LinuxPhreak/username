@@ -31,6 +31,7 @@ Add the following lines to your `/etc/pacman.conf` file.
 Then update the repo list.
 
 `pacman -Syy`
+
 Then you can install by simply typing in the following.
 
 `pacman -S username`
