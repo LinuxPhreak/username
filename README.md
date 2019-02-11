@@ -24,11 +24,15 @@ First install Git and Python3 from your Linux distro
 
 I have an Arch Linux Repository For Username. You can install using pacman by doing the following.
 Add the following lines to your `/etc/pacman.conf` file. 
-`[bigben-repo]
-Server = http://bennix.net/bigben-repo/`
+
+`[bigben-repo]`
+`Server = http://bennix.net/bigben-repo/`
+
 Then update the repo list.
+
 `pacman -Syy`
 Then you can install by simply typing in the following.
+
 `pacman -S username`
 
 ### Gentoo
