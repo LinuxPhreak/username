@@ -9,7 +9,7 @@ pkgdesc="Get Username information"
 url="https://github.com/LinuxPhreak/$_pkgname"
 arch=("any")
 license=("GPL3")
-depends=('python>=3' 'python-requests')
+depends=('python>=3' 'python-requests' 'python-beautifulsoup4')
 source=("git+https://github.com/LinuxPhreak/$_pkgname.git")
 md5sums=("SKIP")
 
@@ -22,5 +22,4 @@ package()
 {
   cd "$_pkgname"
   python setup.py install --root="$pkgdir"
-  pip install beautifulsoup4
 }
