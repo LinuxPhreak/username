@@ -22,4 +22,5 @@ package()
 {
   cd "$_pkgname"
   python setup.py install --root="$pkgdir"
+  pip install beautifulsoup4
 }
