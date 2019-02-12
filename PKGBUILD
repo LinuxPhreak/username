@@ -1,25 +1,39 @@
 # Maintainer: Ben P. Dorsi-Todaro <ben@bigbenshosting.com>
-pkgname=username
-_pkgname=$pkgname
-pkgver=1.0.0
+#I get the following errors when building
+#==> ERROR: pkgver is not allowed to be empty.
+#==> ERROR: pkgver() generated an invalid version:
+_pkgbasename=username
+pkgname=$_pkgbasename
 pkgrel=1
-provides=("$_pkgname")
-conflicts=("$_pkgname")
+pkgver=v1.0.r0.g43ea8a2
 pkgdesc="Get Username information"
-url="https://github.com/LinuxPhreak/$_pkgname"
-arch=("any")
-license=("GPL3")
-depends=('python>=3' 'python-requests' 'python-beautifulsoup4')
-source=("git+https://github.com/LinuxPhreak/$_pkgname.git")
-md5sums=("SKIP")
+arch=('any')
+url="https://linuxphreak.github.io/username"
+license=('GPL')
+depends=('python' 'python-requests')
+source=(git+https://github.com/LinuxPhreak/username)
+md5sums=('SKIP')
 
-pkgver()
-{
-    echo $pkgver 
+pkgver() {
+    cd "$srcdir/$_pkgbasename"
+    git describe --long --tags | sed 's/\([^-]*-g\)/r\1/;s/-/./g'
 }
 
-package()
-{
-  cd "$_pkgname"
-  python setup.py install --root="$pkgdir"
+build() {
+    cd "$srcdir/$_pkgbasename"
+    
+    python setup.py bdist
+}
+
+
+package() {
+    _pkg=$(ls "$srcdir/$_pkgbasename/dist/")
+    tar -xC "$pkgdir/" -f "$srcdir/$_pkgbasename/dist/$_pkg"
+
+    mkdir -p "$pkgdir/usr/bin"
+
+    _python=$(ls "$pkgdir/usr/lib/")
+    chmod +x "$pkgdir/usr/lib/$_python/site-packages/$_pkgbasename/$_pkgbasename.py"
+    ln -s "/usr/lib/$_python/site-packages/$_pkgbasename/$_pkgbasename.py" "$pkgdir/usr/bin/username.py"
+
 }
