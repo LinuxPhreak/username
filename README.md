@@ -26,6 +26,7 @@ I have an Arch Linux Repository For Username. You can install using pacman by do
 Add the following lines to your `/etc/pacman.conf` file. 
 
 `[bigben-repo]`
+
 `Server = http://bennix.net/bigben-repo/`
 
 Then update the repo list.
