@@ -5,12 +5,12 @@
 _pkgbasename=username
 pkgname=$_pkgbasename
 pkgrel=1
-pkgver=v1.0.r2.ge8b129e
+pkgver=v1.0.r5.gf30f628
 pkgdesc="Get Username information"
 arch=('any')
 url="https://linuxphreak.github.io/username"
 license=('GPL')
-depends=('python' 'python-requests')
+depends=('python' 'python-requests' 'python-beautifulsoup4')
 source=(git+https://github.com/LinuxPhreak/username)
 md5sums=('SKIP')
 
@@ -30,7 +30,7 @@ package() {
     _pkg=$(ls "$srcdir/$_pkgbasename/dist/")
     tar -xC "$pkgdir/" -f "$srcdir/$_pkgbasename/dist/$_pkg"
 
-    mkdir -p "$pkgdir/usr/bin"
+    mkdir "$pkgdir/usr/bin"
 
     _python=$(ls "$pkgdir/usr/bin/")
     cp "$srcdir/$_pkgbasename/$_pkgbasename.py" "$pkgdir/usr/bin/$_pkgbasename"
