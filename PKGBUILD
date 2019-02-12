@@ -5,7 +5,7 @@
 _pkgbasename=username
 pkgname=$_pkgbasename
 pkgrel=1
-pkgver=v1.0.r0.g43ea8a2
+pkgver=v1.0.r2.ge8b129e
 pkgdesc="Get Username information"
 arch=('any')
 url="https://linuxphreak.github.io/username"
@@ -32,8 +32,9 @@ package() {
 
     mkdir -p "$pkgdir/usr/bin"
 
-    _python=$(ls "$pkgdir/usr/lib/")
-    chmod +x "$pkgdir/usr/lib/$_python/site-packages/$_pkgbasename/$_pkgbasename.py"
-    ln -s "/usr/lib/$_python/site-packages/$_pkgbasename/$_pkgbasename.py" "$pkgdir/usr/bin/username.py"
+    _python=$(ls "$pkgdir/usr/bin/")
+    cp "$srcdir/$_pkgbasename/$_pkgbasename.py" "$pkgdir/usr/bin/$_pkgbasename"
+    chmod +x "$pkgdir/usr/bin/$_pkgbasename"
+    #ln -s "/usr/lib/$_python/site-packages/$_pkgbasename/$_pkgbasename.py" "$pkgdir/usr/bin/username.py"
 
 }
