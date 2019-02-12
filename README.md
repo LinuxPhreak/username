@@ -6,7 +6,7 @@ Currently right now it simply tells you if a username exists and where it exists
 ## Requirements
 
 * [Python3.6 or higher](http://go.techmeout.org/27)
-* [Beutiful Soup 4 or higher](http://go.techmeout.org/2K)
+* [Beautiful Soup 4 or higher](http://go.techmeout.org/2K)
 
 ## Installation
 First install Git and Python3 from your Linux distro
