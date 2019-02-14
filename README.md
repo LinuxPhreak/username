@@ -27,6 +27,8 @@ Add the following lines to your `/etc/pacman.conf` file.
 
 `[bigben-repo]`
 
+`SigLevel = Optional TrustAll`
+
 `Server = http://bennix.net/bigben-repo/`
 
 Then update the repo list.
