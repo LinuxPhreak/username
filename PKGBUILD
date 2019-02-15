@@ -30,8 +30,7 @@ package() {
     mkdir -p "$pkgdir/usr/bin"
 
     _python=$(ls "$pkgdir/usr/lib/")
-    cp $srcdir/$_pkgbasename/lib/$_python/site-packages/$_pkgbasename.py $pkgdir/usr/lib/$_python/site-packages/$_pkgbasename.py
-    chmod +x "$pkgdir/usr/lib/$_python/site-packages/$_pkgbasename.py"
-    ln -s "/usr/lib/$_python/site-packages/$_pkgbasename.py" "$pkgdir/usr/bin/username"
+    mv $srcdir/$_pkgbasename/lib/$_python/site-packages/$_pkgbasename.py $pkgdir/usr/bin/$_pkgbasename
+    chmod +x "$pkgdir/usr/bin/$_pkgbasename"
 
 }
