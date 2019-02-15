@@ -2,7 +2,7 @@
 _pkgbasename=username
 pkgname=$_pkgbasename-git
 pkgrel=1
-pkgver=v1.0.r7.g8f1e8fa
+pkgver=v1.0
 pkgdesc="Get Username information"
 arch=('any')
 url="https://linuxphreak.github.io/username"
